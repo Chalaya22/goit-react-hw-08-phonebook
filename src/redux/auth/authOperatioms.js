@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
-export const rejister = createAsyncThunk(
+export const register = createAsyncThunk(
   'auth/rejister',
   async (credentials, thunkAPI) => {
     try {
