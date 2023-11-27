@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { register } from 'redux/auth/authOperatioms';
 import css from 'pages/register/Register.module.css';

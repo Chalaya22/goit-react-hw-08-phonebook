@@ -71,7 +71,9 @@ export const App = () => {
     dispatch(current());
   }, [dispatch]);
 
-  return (
+  return isCurrent ? (
+    <b>Refreshing user...</b>
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
