@@ -5,7 +5,7 @@ const ContactElements = ({ id, name, number, onDelete }) => {
       <span className={css.itemName}> {name}:</span>
       <span className={css.itemNumber}> {number}</span>
       <button
-        className={css.itemButton}
+        className={css.buttonForm}
         type="button"
         onClick={() => onDelete(id)}
       >

@@ -2,16 +2,15 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 axios.defaults.baseURL = 'https://6557ec6bbd4bcef8b6134081.mockapi.io';
-//санка- для генерування екшенів та створення запитів
+//санка
 export const fetchContacts = createAsyncThunk(
-  'contacts/fetchAll', //унікаальний префікс створений самостійно
+  'contacts/fetchAll',
   async (_, thunkAPI) => {
-    //асинхронна колбек функція, яка берев перший параметр данні ,які приходять зовні
     try {
       const { data } = await axios('/contacts');
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message); // завдяки rejectWithValue санка баче помилку
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );

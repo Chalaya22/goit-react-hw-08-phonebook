@@ -1,4 +1,5 @@
 import React from 'react';
+
 const styles = {
   container: {
     display: 'flax',
@@ -7,10 +8,7 @@ const styles = {
     justifyContent: 'center',
     textAlign: 'center',
   },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-  },
+
   span: {
     fontWeight: 400,
     fontSize: 24,
@@ -19,11 +17,14 @@ const styles = {
     webkitBackgroundClip: 'text',
     webkitTextFillColor: 'transparent',
   },
+  title: {
+    color: 'rgb(11, 88, 114)',
+  },
 };
 const Home = () => {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Welcom❤️❤️❤️</h1>
+      <h1 style={styles.title}>Welcom, users!</h1>
       <span style={styles.span}>
         Please, Sign up or Log in to have access to the Phonebook!
       </span>

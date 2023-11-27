@@ -1,17 +1,7 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { register } from 'redux/auth/authOperatioms';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import css from 'pages/register/Register.module.css';
 
 export const Register = () => {
   const dispatch = useDispatch();
@@ -40,42 +30,51 @@ export const Register = () => {
     setPassword('');
   };
   return (
-    <div>
-      <h1>Page Register </h1>
-      <form onSubmit={hendleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
-          Name
+    <container className={css.container}>
+      <h1 className={css.title}> Register </h1>
+      <p> Немає акаунту? / Зареєструйся тут</p>
+      <form onSubmit={hendleSubmit} className={css.form}>
+        <label className={css.label}>
+          <p className={css.paragraf}>Name</p>
           <input
+            className={css.input}
             id="name"
             type="text"
             name="name"
             value={name}
             onChange={handleChange}
+            placeholder="Enter username"
           />
         </label>
-        <label style={styles.label}>
-          Email
+        <label className={css.label}>
+          <p className={css.paragraf}>Email</p>
           <input
+            className={css.input}
             id="email"
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
+            placeholder="Enter email"
           />
         </label>
-        <label style={styles.label}>
-          Password
+        <label className={css.label}>
+          <p className={css.paragraf}>Passford</p>
           <input
+            className={css.input}
             id="password"
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
+            placeholder="Enter passford"
           />
         </label>
-        <button type="submit"> Register now</button>
+        <button type="submit" className={css.btn}>
+          Register now
+        </button>
       </form>
-    </div>
+    </container>
   );
 };
 export default Register;

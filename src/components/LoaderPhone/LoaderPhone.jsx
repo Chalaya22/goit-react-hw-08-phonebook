@@ -1,15 +1,15 @@
-import { RotatingTriangles } from 'react-loader-spinner';
+import { Dna } from 'react-loader-spinner';
 import css from './LoaderPhone.module.css';
 const Loader = () => {
   return (
     <div className={css.styleLoader}>
-      <RotatingTriangles
+      <Dna
         visible={true}
         height="80"
         width="80"
-        ariaLabel="rotating-triangels-loading"
+        ariaLabel="dna-loading"
         wrapperStyle={{}}
-        wrapperClass="rotating-triangels-wrapper"
+        wrapperClass="dna-wrapper"
       />
     </div>
   );

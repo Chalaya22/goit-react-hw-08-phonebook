@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { register, login, logout } from 'redux/auth/authOperatioms';
+import { register, login, logOut, current } from 'redux/auth/authOperatioms';
 
 const initialState = {
   user: {
@@ -8,6 +8,7 @@ const initialState = {
     password: 'null',
   },
   isLoggedIn: false,
+  isCurrent: false,
   token: 'null',
   isLoading: false,
   error: null,
@@ -27,6 +28,7 @@ const authSlice = createSlice({
       state.isLoggedIn = true;
       state.isLoading = false;
     },
+
     [register.rejected]: (state, action) => {
       state.error = action.payload;
       state.isLoading = false;
@@ -38,12 +40,36 @@ const authSlice = createSlice({
       state.isLoggedIn = true;
       state.isLoading = false;
     },
+
     [login.rejected]: (state, action) => {
       state.error = action.payload;
       state.isLoading = false;
     },
-    //logout
+    //logOut
+    [logOut.fulfilled]: state => {
+      state.user = { name: null, email: null };
+      state.token = null;
+      state.isLoggedIn = false;
+    },
+    [logOut.rejected]: (state, action) => {
+      state.error = action.payload;
+      state.isLoading = false;
+    },
+    //current
+    [current.pending]: state => {
+      state.isCurrent = true;
+    },
+    [current.fulfilled]: (state, action) => {
+      state.user = action.payload;
+      state.isLoggedIn = true;
+      state.isCurrent = false;
+    },
+    [current.rejected]: (state, action) => {
+      state.isCurrent = false;
+      state.error = action.payload;
+      state.isLoading = false;
+    },
   },
 });
-// export default authSlice.reducer;
+
 export const authReducer = authSlice.reducer;

@@ -1,20 +1,13 @@
-.contactElements {
-  position: relative;
+.container {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin: 14px;
-  /* gap: 24px; */
+  gap: 12px;
 }
-.itemName {
+.userName {
   font-weight: 700;
   color: rgb(7, 57, 74);
 }
-.itemNumber {
-  position: absolute;
-  left: 180px;
-}
-.buttonForm {
+.button {
   align-self: flex-start;
   padding: 10px 15px;
   border: none;
@@ -24,10 +17,9 @@
   color: black;
   font-weight: 500;
   font-size: 12px;
-  margin-left: auto;
 }
-.buttonForm:hover,
-.buttonForm:focus {
+.button:hover,
+.button:focus {
   background-color: rgb(7, 57, 74);
   color: white;
 }

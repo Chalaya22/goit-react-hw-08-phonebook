@@ -14,7 +14,7 @@ const Filter = () => {
   return (
     <div className={css.filter}>
       <label htmlFor="filter">
-        <p className={css.filterTitle}>Find contact by name 🔸🔸🔸🔸🔸🔸🔸</p>
+        <p className={css.filterTitle}>FIND CONTACT BY NAME</p>
         <input
           className={css.filterImput}
           type="text"
@@ -22,7 +22,7 @@ const Filter = () => {
           id="filter"
           value={filter}
           onChange={onFilter}
-          placeholder="username: "
+          placeholder=" Username: "
           required
         />
       </label>
