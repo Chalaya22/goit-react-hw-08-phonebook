@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[936],{4936:function(e,s,a){a.r(s),a.d(s,{default:function(){return r}});a(2791);var n="Home_container__w+u63",t="Home_span__mK0w7",o="Home_title__L087v",c=a(184),r=function(){return(0,c.jsxs)("div",{className:n,children:[(0,c.jsx)("h1",{className:o,children:"Welcom, users!"}),(0,c.jsx)("span",{className:t,children:"Please, Sign up or Log in to have access to the Phonebook!"})]})}}}]);
+//# sourceMappingURL=936.c51d9137.chunk.js.map
