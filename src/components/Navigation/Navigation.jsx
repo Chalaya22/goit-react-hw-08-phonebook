@@ -8,7 +8,7 @@ const styles = {
     alineItems: 'center',
     textDecoration: 'none',
     padding: 12,
-    fontWeight: 700,
+    fontWeight: 400,
     color: '#2a363b',
   },
 };
@@ -21,12 +21,12 @@ export const Navigation = () => {
         <BsHouseLockFill size="20" color="rgb(11, 88, 114)" />
       </span>
       <NavLink style={styles.link} to="/">
-        Home
+        HOME
       </NavLink>
 
       {isLoggedIn && (
         <NavLink style={styles.link} to="/contacts">
-          Contacts
+          CONTACTS
         </NavLink>
       )}
     </nav>

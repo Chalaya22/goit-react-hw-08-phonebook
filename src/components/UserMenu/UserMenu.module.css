@@ -4,11 +4,11 @@
   gap: 12px;
 }
 .userName {
-  font-weight: 700;
+  font-weight: 400;
   color: rgb(7, 57, 74);
 }
 .button {
-  align-self: flex-start;
+  align-items: center;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
