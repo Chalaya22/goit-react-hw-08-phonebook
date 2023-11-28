@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactOperation';
+import Notiflix from 'notiflix';
 import css from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -32,7 +33,9 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
+    if (name.trim() === '' || number.trim() === '') {
+      Notiflix.Notify.warning(' Please fill in all fields!');
+    }
     const newObject = {
       id: nanoid(),
       name,

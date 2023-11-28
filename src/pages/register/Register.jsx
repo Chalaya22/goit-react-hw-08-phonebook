@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { register } from 'redux/auth/authOperatioms';
 import { getIsLoadind } from 'redux/auth/authSelectors';
+import Notiflix from 'notiflix';
 import Loader from 'components/LoaderPhone/LoaderPhone';
 import css from 'pages/register/Register.module.css';
 
@@ -27,6 +28,9 @@ export const Register = () => {
 
   const hendleSubmit = e => {
     e.preventDefault();
+    if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
+      Notiflix.Notify.warning(' Please fill in all fields!');
+    }
     dispatch(register({ name, email, password }));
     setName('');
     setEmail('');
