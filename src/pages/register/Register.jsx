@@ -1,10 +1,13 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { register } from 'redux/auth/authOperatioms';
+import { getIsLoadind } from 'redux/auth/authSelectors';
+import Loader from 'components/LoaderPhone/LoaderPhone';
 import css from 'pages/register/Register.module.css';
 
 export const Register = () => {
   const dispatch = useDispatch();
+  const isLoading = useSelector(getIsLoadind);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,6 +34,7 @@ export const Register = () => {
   };
   return (
     <container className={css.container}>
+      {isLoading && <Loader />}
       <h1 className={css.title}> Register </h1>
       <p> Немає акаунту? / Зареєструйся тут</p>
       <form onSubmit={hendleSubmit} className={css.form}>

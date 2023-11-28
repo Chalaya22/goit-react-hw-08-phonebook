@@ -34,6 +34,10 @@ const authSlice = createSlice({
       state.isLoading = false;
     },
     //login
+    [login.pending]: state => {
+      state.isLoading = true;
+    },
+
     [login.fulfilled]: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
@@ -46,6 +50,7 @@ const authSlice = createSlice({
       state.isLoading = false;
     },
     //logOut
+
     [logOut.fulfilled]: state => {
       state.user = { name: null, email: null };
       state.token = null;

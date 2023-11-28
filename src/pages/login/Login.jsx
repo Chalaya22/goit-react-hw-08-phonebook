@@ -1,10 +1,13 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { login } from 'redux/auth/authOperatioms';
+import { getIsLoadind } from 'redux/auth/authSelectors';
+import Loader from 'components/LoaderPhone/LoaderPhone';
 import css from 'pages/login/login.module.css';
 
 export const Login = () => {
   const dispatch = useDispatch();
+  const isLoading = useSelector(getIsLoadind);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,6 +30,7 @@ export const Login = () => {
   };
   return (
     <div className={css.container}>
+      {isLoading && <Loader />}
       <h1 className={css.title}>Login </h1>
       <p>Логінся / Отримай доступ до книги контактів</p>
       <form className={css.form} onSubmit={hendleSubmit}>
