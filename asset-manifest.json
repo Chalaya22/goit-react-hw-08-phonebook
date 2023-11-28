@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.469bc83d.css",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.23f8c74d.css",
     "main.js": "/goit-react-hw-08-phonebook/static/js/main.cd7e53f9.js",
     "static/css/936.59bc1204.chunk.css": "/goit-react-hw-08-phonebook/static/css/936.59bc1204.chunk.css",
     "static/js/936.c51d9137.chunk.js": "/goit-react-hw-08-phonebook/static/js/936.c51d9137.chunk.js",
@@ -13,7 +13,7 @@
     "static/js/338.9731253f.chunk.js": "/goit-react-hw-08-phonebook/static/js/338.9731253f.chunk.js",
     "static/media/woman-working-with-laptop-smatphone-agenda.jpg": "/goit-react-hw-08-phonebook/static/media/woman-working-with-laptop-smatphone-agenda.e5d15b4a87001eed4601.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.469bc83d.css.map": "/goit-react-hw-08-phonebook/static/css/main.469bc83d.css.map",
+    "main.23f8c74d.css.map": "/goit-react-hw-08-phonebook/static/css/main.23f8c74d.css.map",
     "main.cd7e53f9.js.map": "/goit-react-hw-08-phonebook/static/js/main.cd7e53f9.js.map",
     "936.59bc1204.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/936.59bc1204.chunk.css.map",
     "936.c51d9137.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/936.c51d9137.chunk.js.map",
@@ -26,7 +26,7 @@
     "338.9731253f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/338.9731253f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.469bc83d.css",
+    "static/css/main.23f8c74d.css",
     "static/js/main.cd7e53f9.js"
   ]
 }
