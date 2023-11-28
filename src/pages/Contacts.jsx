@@ -37,10 +37,10 @@ export const Contacts = () => {
     <section className="styledSection">
       {error !== null && <p> Ooops... {error}</p>}
       {isLoading && <Loader />}
-      <h1 className="titlePhone">Phonebook </h1>
+      <h1 className="titlePhone">PHONEBOOKS </h1>
       <ContactForm />
 
-      <h2 className="titleContact">Contacts</h2>
+      <h2 className="titleContact">CONTACTS</h2>
       {contacts.length > 1 && <Filter />}
 
       {<ContactList />}

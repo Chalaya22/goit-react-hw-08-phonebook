@@ -24,30 +24,8 @@
 }
 .title {
   font-size: 48px;
+  font-weight: 600;
   color: rgb(11, 88, 114);
   padding: 40px;
   margin: 0;
 }
-
-/* const styles = {
-  container: {
-    display: 'flax',
-    minHeight: 'calc(100wh - 50px)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    height: 600,
-  },
-
-  span: {
-    fontWeight: 400,
-    fontSize: 24,
-    backgroundColor: '#2AA5A0',
-    backgroundImage: 'linear-gradient(90deg, #E3535D, #2a41a5)',
-    webkitBackgroundClip: 'text',
-    webkitTextFillColor: 'transparent',
-  },
-  title: {
-    color: 'rgb(11, 88, 114)',
-  },
-}; */

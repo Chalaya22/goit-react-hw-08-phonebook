@@ -20,7 +20,9 @@ code {
 .titlePhone {
   margin: 0 auto;
   color: rgb(11, 88, 114);
+  font-weight: 400;
 }
 .titleContact {
   color: rgb(11, 88, 114);
+  font-weight: 400;
 }
