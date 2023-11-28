@@ -2,8 +2,6 @@ import { useDispatch } from 'react-redux';
 import { BsPersonFillLock } from 'react-icons/bs';
 import { logOut } from 'redux/auth/authOperatioms';
 import { useAuth } from 'hooks';
-// import { useSelector } from 'react-redux';
-// import { getuserName } from 'redux/auth/authSelectors';
 import css from './UserMenu.module.css';
 
 export const UserMenu = () => {

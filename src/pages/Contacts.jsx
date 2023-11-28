@@ -43,7 +43,7 @@ export const Contacts = () => {
       <h2 className="titleContact">Contacts</h2>
       {contacts.length > 1 && <Filter />}
 
-      {contacts.length !== 0 && <ContactList />}
+      {<ContactList />}
     </section>
   );
 };
