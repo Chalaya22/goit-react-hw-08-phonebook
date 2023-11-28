@@ -20,7 +20,6 @@ const styles = {
   },
   title: {
     color: 'rgb(11, 88, 114)',
-    padding: 30,
   },
 };
 const Home = () => {
