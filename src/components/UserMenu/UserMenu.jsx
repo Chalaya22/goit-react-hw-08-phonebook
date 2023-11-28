@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { BsPersonFillLock } from 'react-icons/bs';
 import { logOut } from 'redux/auth/authOperatioms';
 import { useAuth } from 'hooks';
 import css from './UserMenu.module.css';
+import avatar from '../../images/331.jpg';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -10,9 +10,12 @@ export const UserMenu = () => {
 
   return (
     <div className={css.container}>
-      <span>
-        <BsPersonFillLock size="22" color="rgb(228, 150, 163)" />
-      </span>
+      <img
+        src={avatar}
+        alt="Default Avatar"
+        width="42"
+        className={css.avatar}
+      />
       <p className={css.userName}> WELCOME , {isName} !</p>
       <button
         className={css.button}

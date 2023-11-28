@@ -23,3 +23,6 @@
   background-color: rgb(7, 57, 74);
   color: white;
 }
+.avatar {
+  border-radius: 50%;
+}
