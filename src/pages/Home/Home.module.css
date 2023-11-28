@@ -1,0 +1,53 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.2),
+      rgba(46, 47, 66, 0.2)
+    ),
+    url(../../images/woman-working-with-laptop-smatphone-agenda.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+.span {
+  font-weight: 400;
+  font-size: 34px;
+  background-color: #2aa5a0;
+  background-image: linear-gradient(90deg, #e3535d, #2a41a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title {
+  font-size: 48px;
+  color: rgb(11, 88, 114);
+  padding: 40px;
+  margin: 0;
+}
+
+/* const styles = {
+  container: {
+    display: 'flax',
+    minHeight: 'calc(100wh - 50px)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    height: 600,
+  },
+
+  span: {
+    fontWeight: 400,
+    fontSize: 24,
+    backgroundColor: '#2AA5A0',
+    backgroundImage: 'linear-gradient(90deg, #E3535D, #2a41a5)',
+    webkitBackgroundClip: 'text',
+    webkitTextFillColor: 'transparent',
+  },
+  title: {
+    color: 'rgb(11, 88, 114)',
+  },
+}; */
