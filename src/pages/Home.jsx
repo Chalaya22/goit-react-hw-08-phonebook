@@ -7,6 +7,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
+    height: 600,
   },
 
   span: {
@@ -19,6 +20,7 @@ const styles = {
   },
   title: {
     color: 'rgb(11, 88, 114)',
+    padding: 30,
   },
 };
 const Home = () => {
