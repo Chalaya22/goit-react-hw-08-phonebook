@@ -7,7 +7,7 @@ import { PublicRoute } from './PublicRoute';
 import { current } from 'redux/auth/authOperatioms';
 import { useAuth } from 'hooks';
 
-const Home = lazy(() => import('pages/Home/Home'));
+const Home = lazy(() => import('pages/home/Home'));
 const Register = lazy(() => import('pages/register/Register'));
 const Login = lazy(() => import('pages/login/Login'));
 const Contacts = lazy(() => import('../pages/Contacts'));
