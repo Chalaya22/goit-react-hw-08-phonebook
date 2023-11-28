@@ -7,7 +7,6 @@ import css from './UserMenu.module.css';
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { isName } = useAuth();
-  // const isName = useSelector(getuserName);
 
   return (
     <div className={css.container}>

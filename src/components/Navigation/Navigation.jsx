@@ -2,9 +2,6 @@ import { NavLink } from 'react-router-dom';
 import { useAuth } from 'hooks';
 import { BsHouseLockFill } from 'react-icons/bs';
 
-// import { useSelector } from 'react-redux';
-// import { getIsLoggedIn } from 'redux/auth/authSelectors';
-
 const styles = {
   link: {
     display: 'inline-block',
@@ -17,7 +14,6 @@ const styles = {
 };
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
-  // const isLoggedIn = useSelector(getIsLoggedIn);
 
   return (
     <nav>

@@ -24,7 +24,7 @@ export const register = createAsyncThunk(
       return response.data;
     } catch (error) {
       if (error?.response?.data?.name === 'MongoError') {
-        alert('User with this email is already registered!');
+        alert('You are already registered!');
       }
       return thunkAPI.rejectWithValue(error.message);
     }
