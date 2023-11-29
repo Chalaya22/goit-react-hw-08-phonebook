@@ -1,49 +1,30 @@
-import React, { useState } from 'react';
-import { nanoid } from 'nanoid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactOperation';
-import Notiflix from 'notiflix';
+import { selectorContacts } from 'redux/selectors';
 import css from './ContactForm.module.css';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
+  const contacts = useSelector(selectorContacts);
 
-  const [name, setName] = useState(' ');
-  const [number, setNumber] = useState(' ');
-
-  const handleInputChange = event => {
-    const { name, value } = event.currentTarget;
-
-    switch (name) {
-      case 'name':
-        setName(value);
-        break;
-      case 'number':
-        setNumber(value);
-        break;
-
-      default:
-        return;
-    }
-  };
-  const reset = () => {
-    setName(' ');
-    setNumber(' ');
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (name.trim() === '' || number.trim() === '') {
-      Notiflix.Notify.warning(' Please fill in all fields!');
-    }
-    const newObject = {
-      id: nanoid(),
-      name,
-      number,
+  const handleSubmit = event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const { name, number } = form.elements;
+    const isCurrentContactsBook = (name, contacts) => {
+      return contacts.some(
+        contact => contact.name.toLowerCase() === name.toLowerCase()
+      );
     };
 
-    dispatch(addContact(newObject));
-    reset();
+    if (isCurrentContactsBook(name.value, contacts)) {
+      alert(`${name.value} is already in contacts.`);
+      return;
+    }
+
+    dispatch(addContact({ name: name.value, number: number.value }));
+
+    form.reset();
   };
 
   return (
@@ -52,11 +33,11 @@ const ContactForm = () => {
         <p className={css.labelText}>Name</p>
         <input
           className={css.imputForm}
+          id="name"
+          pattern="^[a-zA-Zа-яА-Я]+((['\-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           type="text"
           name="name"
-          value={name}
-          onChange={handleInputChange}
-          placeholder="username: "
+          placeholder="Enter username: "
           required
         />
       </label>
@@ -64,11 +45,11 @@ const ContactForm = () => {
         <p className={css.labelText}>Number</p>
         <input
           className={css.imputForm}
+          id="number"
+          pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
+          placeholder="Enter  number:"
           type="tel"
           name="number"
-          value={number}
-          onChange={handleInputChange}
-          placeholder="Enter number tel:"
           required
         />
       </label>

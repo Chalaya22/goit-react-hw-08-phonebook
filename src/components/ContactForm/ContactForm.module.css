@@ -29,8 +29,8 @@
   text-indent: 20px;
 }
 input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 14px;
   opacity: 0.5;
   color: rgb(11, 88, 114);
 }

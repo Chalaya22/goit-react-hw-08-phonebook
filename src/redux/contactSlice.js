@@ -33,10 +33,10 @@ const contactsSlice = createSlice({
     },
     [addContact.fulfilled]: (state, action) => {
       state.isLoading = false;
-      const { name } = action.payload;
-      if (state.contacts.some(contact => contact.name === name)) {
-        return alert(`${name} is already in contacts`);
-      }
+      // const { name } = action.payload;
+      // if (state.contacts.some(contact => contact.name === name)) {
+      //  return alert(`${name} is already in contacts`);
+      // }
       state.contacts.push(action.payload);
     },
     [addContact.rejected]: (state, action) => {
