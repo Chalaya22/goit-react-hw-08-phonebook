@@ -55,19 +55,31 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 });
 
 //current
-export const current = createAsyncThunk('auth/current', async (_, thunkAPI) => {
-  const state = thunkAPI.getState();
-  const persistedToken = state.auth.token;
+export const current = createAsyncThunk(
+  'auth/current',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
 
-  if (persistedToken === null) {
-    return thunkAPI.rejectWithValue('Unable to fetch user');
-  }
+    if (persistedToken === null) {
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
 
-  try {
-    token.set(persistedToken);
-    const response = await base.get('/users/current');
-    return response.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    try {
+      token.set(persistedToken);
+      const response = await base.get('/users/current');
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
   }
-});
+  // {
+  //   //умова яка не запускає санку якщо ми не залогінелмсь
+  //   condition: (_, thunkAPI) => {
+  //     const state = thunkAPI.getState();
+  //     const persistedToken = state.auth.token;
+  //     if (persistedToken) return false;
+  //     return true;
+  //   },
+  // }
+);

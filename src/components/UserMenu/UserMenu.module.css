@@ -20,7 +20,7 @@
 }
 .button:hover,
 .button:focus {
-  background-color: rgb(7, 57, 74);
+  background-color: #833ab4;
   color: white;
 }
 .avatar {

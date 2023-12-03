@@ -1,18 +1,26 @@
 .contactElements {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   margin: 14px;
-  /* gap: 24px; */
 }
+
 .itemName {
   font-weight: 500;
   color: rgb(7, 57, 74);
 }
+.itemName::before {
+  content: '\2055';
+  color: #00ace4;
+  margin-left: 10px;
+  display: inline-block;
+  width: 10px;
+}
 .itemNumber {
-  position: absolute;
-  left: 180px;
+  /* position: absolute;
+  left: 180px; */
+  text-align: center;
 }
 .buttonForm {
   align-self: flex-start;
@@ -24,7 +32,7 @@
   color: black;
   font-weight: 500;
   font-size: 12px;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 .buttonForm:hover,
 .buttonForm:focus {
